@@ -4,17 +4,20 @@ codigo_label = document.getElementById("label");
 format = document.getElementById("format");
 
 gerarFunction = () => {
-  
   if (texto.value === "") return undefined;
-  JsBarcode("#barcode", texto.value, {
-    format: format.value,
-    lineColor: "#000",
-    width: 4,
-    height: 40,
-    displayValue: false,
-  });
-  codigo_label.innerHTML = texto.value;
-
+  try {
+    JsBarcode("#barcode", texto.value, {
+      format: format.value,
+      lineColor: "#000",
+      width: 4,
+      height: 40,
+      displayValue: false,
+      flat: true
+    });
+    codigo_label.innerHTML = texto.value;
+  } catch (error) {
+    alert("Erro: " + error);
+  }
 };
 
 gerar.addEventListener("click", () => {
