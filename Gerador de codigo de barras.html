@@ -19,10 +19,32 @@
             id="texto"
             placeholder="Digite o texto a ser transformado em codigo de barras ..."
           />
+          
           <button id="gerar">Gerar</button>
           <div class="horizontal-center">
             <svg id="barcode"></svg>
-            <label for="barcode" id="label"></label>
+            <label for="barcode" id="label"></label><br><br><br>
+            <label for="cars">FORMATO:</label>
+            <select name="format" id="format">
+              <option value="CODE39">CODE39</option>
+              <option value="CODE128">CODE128</option>
+              <option value="EAN13">EAN13</option>
+              <option value="EAN8">EAN8</option>
+              <option value="EAN5">EAN5</option>
+              <option value="EAN2">EAN2</option>
+              <option value="UPC">UPC</option>
+              <option value="UPCE">UPCE</option>
+              <option value="ITF14">ITF14</option>
+              <option value="ITF">ITF</option>
+              <option value="MSI">MSI</option>
+              <option value="MSI10">MSI10</option>
+              <option value="MSI11">MSI11</option>
+              <option value="MSI1010">MSI1010</option>
+              <option value="MSI1110">MSI1110</option>
+              <option value="pharmacode">pharmacode</option>
+              <option value="codabar">codabar</option>
+              <option value="GenericBarcode">GenericBarcode</option>
+            </select>
           </div>
         </div>
       </div>
